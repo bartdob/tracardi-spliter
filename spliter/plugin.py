@@ -13,12 +13,17 @@ class SpliterAction(ActionRunner):
         )
 
     async def run(self, payload):
-        print(self.spliter.dict())
-        result = self.spliter.message.replace(self.spliter.dot, " ")
+        if len(self.spliter.message)>2 and self.spliter.dot:
+            print(self.spliter.dict())
+            result = self.spliter.message.replace(self.spliter.dot, " ")
 
-        return Result(port="payload", value={
-            "body": result
-        })
+            return Result(port="payload", value={
+                "body": result
+            })
+        else:
+            raise ValueError("message is too short or none.")
+
+
 
 
 def register() -> Plugin:
@@ -26,7 +31,7 @@ def register() -> Plugin:
         start=False,
         spec=Spec(
             module='',
-            className='pushover',
+            className='',
             inputs=["payload"],
             outputs=['payload'],
             version='0.1',
@@ -39,12 +44,12 @@ def register() -> Plugin:
 
         ),
         metadata=MetaData(
-            name='Pushover',
+            name='Spliter',
             desc='message spliter',
             type='flowNode',
             width=200,
             height=100,
-            icon='pushover',
+            icon='',
             group=["Connectors"]
         )
     )

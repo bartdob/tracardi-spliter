@@ -1,4 +1,4 @@
-# String spliter plugin
+# String splitter plugin
 
 This plugin split any string with a given spliter
 
