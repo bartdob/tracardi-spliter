@@ -4,17 +4,15 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='string-spliter',
-    version='0.1',
+    name='tracardi-string-splitter',
+    version='0.1.1',
     description='The purpose of this plugin is split any string',
     long_description=long_description,
     long_description_content_type="text/markdown",
     author='Bartosz Dobrosielski`',
     author_email='bdobrosielski@edu.cdv.pl',
-    packages=['string_spliter'],
+    packages=['tracardi_string_splitter'],
     install_requires=[
-        'pydantic',
-        'asyncio',
         'tracardi-plugin-sdk'
     ],
     classifiers=[
