@@ -3,4 +3,4 @@ python -m twine upload dist/*
 
 rm -rf build
 rm -rf dist
-rm -rf tracardi_string_spiltter.egg-info
+rm -rf tracardi_string_splitter.egg-info
