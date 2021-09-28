@@ -32,12 +32,12 @@ def register() -> Plugin:
 
         ),
         metadata=MetaData(
-            name='Splitter',
-            desc='String splitter',
+            name='String splitter',
+            desc='It divides string into array of strings on defined delimiter.',
             type='flowNode',
             width=200,
             height=100,
             icon='splitter',
-            group=["Traits"]
+            group=["Data processing"]
         )
     )
