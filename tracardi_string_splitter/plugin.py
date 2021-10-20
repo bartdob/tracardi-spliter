@@ -4,10 +4,14 @@ from tracardi_plugin_sdk.domain.result import Result
 from tracardi_string_splitter.model.model import Splitter
 
 
+def validate(config: dict) -> Configuration:
+    return Configuration(**config)
+
+
 class SplitterAction(ActionRunner):
 
     def __init__(self, **kwargs):
-        self.splitter = Splitter(**kwargs)
+        self.splitter = validate(kwargs)
 
     async def run(self, payload):
         result = self.splitter.string.split(self.splitter.delimiter)
@@ -22,7 +26,7 @@ def register() -> Plugin:
             className='SplitterAction',
             inputs=["payload"],
             outputs=['payload'],
-            version='0.1.1',
+            version='0.6.0',
             license="MIT",
             author="Bartosz Dobrosielski",
             init={
