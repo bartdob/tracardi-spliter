@@ -13,7 +13,7 @@ setup(
     author_email='bdobrosielski@edu.cdv.pl',
     packages=['tracardi_string_splitter'],
     install_requires=[
-        'tracardi-plugin-sdk'
+        'tracardi-plugin-sdk>0.6.22'
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
