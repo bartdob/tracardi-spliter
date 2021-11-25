@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='tracardi-string-splitter',
-    version='0.1.1',
+    version='0.6.0',
     description='The purpose of this plugin is split any string',
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -13,7 +13,7 @@ setup(
     author_email='bdobrosielski@edu.cdv.pl',
     packages=['tracardi_string_splitter'],
     install_requires=[
-        'tracardi-plugin-sdk'
+        'tracardi-plugin-sdk>=0.6.22'
     ],
     classifiers=[
         "Programming Language :: Python :: 3",

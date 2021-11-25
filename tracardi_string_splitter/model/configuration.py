@@ -2,7 +2,7 @@ from pydantic import validator
 from pydantic.main import BaseModel
 
 
-class Splitter(BaseModel):
+class Configuration(BaseModel):
     string: str
     delimiter: str
 

@@ -1,10 +1,6 @@
-# String splitter plugin
+# String splitter
 
-This plugin split any string with a given delimiter
-
-# Requirements
-
-no requirements
+This plugin splits any string with a given delimiter.
 
 # Configuration
 
@@ -18,6 +14,15 @@ Example:
 ```
 
 This configuration will split `a.b.c` string into ["a", "b", "c"], using '.' as delimiter.
+String can be provided as a path to data in profile, event, session, etc. Example of such configuration.
+
+```json
+{
+  "string": "event@properties.data",
+  "delimiter": "."
+}
+```
+
 
 # Input
 
@@ -25,7 +30,7 @@ This plugin does not process input.
 
 # Output
 
-Returns array with splitted values.
+Returns array with separated values.
 
 Example:
 
